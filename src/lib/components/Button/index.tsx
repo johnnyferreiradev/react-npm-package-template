@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { ButtonProps } from "./types";
+import { ButtonProps } from './types';
 
-import "./styles.css";
+import './styles.css';
 
 const Button = ({ className, ...rest }: ButtonProps) => {
-  return <button className={`button-test outline-none ${className}`} {...rest} />;
+  return (
+    <button className={`button-test outline-none ${className}`} {...rest} />
+  );
 };
 
 export default Button;
