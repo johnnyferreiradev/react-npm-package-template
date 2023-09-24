@@ -1,14 +1,14 @@
 // tsup.config.ts
 
-import { defineConfig } from "tsup";
-import tsconfig from "./tsconfig.json";
+import { defineConfig } from 'tsup';
+import tsconfig from './tsconfig.json';
 
-export default defineConfig((options) => ({
-  entry: ["src/lib/index.ts"],
+export default defineConfig(() => ({
+  entry: ['src/lib/index.ts', 'src/lib/locales/index.ts'],
   dts: true,
-  outDir: "dist",
-  format: ["esm", "cjs"],
-  name: "tsup-lib-test",
+  outDir: 'dist',
+  format: ['esm', 'cjs'],
+  name: 'tsup-lib-test',
   splitting: false,
   outExtension({ format }) {
     return {
@@ -17,6 +17,6 @@ export default defineConfig((options) => ({
   },
   sourcemap: true,
   clean: true,
-  target: tsconfig.compilerOptions.target as "es2016",
+  target: tsconfig.compilerOptions.target as 'es2016',
   minify: false,
 }));

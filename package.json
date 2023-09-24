@@ -24,6 +24,11 @@
     "./styles.css": {
       "import": "./dist/index.css",
       "require": "./dist/index.css"
+    },
+    "./locales": {
+      "import": "./dist/locales/index.esm.js",
+      "types": "./dist/locales/index.d.ts",
+      "require": "./dist/locales/index.cjs.js"
     }
   },
   "scripts": {
